@@ -2,11 +2,13 @@
 #
 # VERSION       0.3
 
-FROM bgruening/galaxy-stable:15.05
+FROM bgruening/galaxy-stable:dev
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
 ENV GALAXY_CONFIG_BRAND deepTools
+ENV ENABLE_TTS_INSTALL True
+ENV GALAXY_CONFIG_TOOL_SHEDS_CONFIG_FILE $GALAXY_HOME/tool_sheds_conf.xml
 
 WORKDIR /galaxy-central
 
